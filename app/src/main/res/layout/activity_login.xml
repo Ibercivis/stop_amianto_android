@@ -158,7 +158,8 @@
                     android:layout_marginHorizontal="20dp"
                     android:text="@string/login6"
                     android:textColor="#fff"
-                    android:transitionName="btn1_tran" />
+                    android:transitionName="btn1_tran"
+                    android:onClick="loginRequest"/>
 
                 <Button
                     android:id="@+id/signup_btn"

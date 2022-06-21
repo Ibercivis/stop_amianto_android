@@ -68,7 +68,7 @@ public class SplashActivity extends AppCompatActivity {
                 PackageManager.PERMISSION_GRANTED  ){
             if (SDK_INT >= Build.VERSION_CODES.R) {
                 requestPermissions(new String[]{
-                                Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.MANAGE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA},
+                                Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA},
                         REQUEST_CODE_ASK_PERMISSIONS);
             }
             recreate();
@@ -119,7 +119,7 @@ public class SplashActivity extends AppCompatActivity {
                 Pair[] pairs = new Pair[2];
                 pairs[0] = new Pair<View,String>(logo,"logo_image");
                 pairs[1] = new Pair<View,String>(titulo,"logo_text");
-                pairs[2] = new Pair<View,String>(titulo2,"logo_text2");
+
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(SplashActivity.this, pairs);
                 startActivity(intent, options.toBundle());
                 finish();
