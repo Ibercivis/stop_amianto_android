@@ -1,0 +1,160 @@
+package com.ibercivis.stopamianto;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+
+import android.Manifest;
+import android.app.ActivityOptions;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
+import android.os.Bundle;
+import android.os.Handler;
+import android.util.Pair;
+import android.view.View;
+import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.ibercivis.stopamianto.R;
+import com.ibercivis.stopamianto.clases.SessionManager;
+
+
+public class SplashActivity extends AppCompatActivity {
+
+    private static int SPLASH_SCREEN = 3000;
+
+    // Variables
+    Animation topAnim, bottomAnim;
+    ImageView logo;
+    TextView titulo, titulo2, slogan;
+
+    final private int REQUEST_CODE_ASK_PERMISSIONS = 123;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+
+        setContentView(R.layout.activity_splash);
+
+        havePermission();
+        /* AQUÍ SE HACEN LAS PETICIONES DE PERMISOS QUE VA A NECESITAR LA APP: UBICACIÓN, ACCESO A ESCRITURA PARA LOS TILES DE LOS MAPAS, ACCESO A LA CÁMARA*/
+
+        /*
+        if(SDK_INT >= 30){
+            if(!Environment.isExternalStorageManager()){
+                Snackbar.make(findViewById(android.R.id.content), "Permission needed!", Snackbar.LENGTH_INDEFINITE)
+                        .setAction("Settings", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                try {
+                                    Uri uri = Uri.parse("package:" + BuildConfig.APPLICATION_ID);
+                                    Intent intent = new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION, uri);
+                                    startActivity(intent);
+                                } catch (Exception ex){
+                                    Intent intent = new Intent();
+                                    intent.setAction(Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION);
+                                    startActivity(intent);
+                                }
+                            }
+                        })
+                        .show();
+            } }
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) !=
+                PackageManager.PERMISSION_GRANTED  ){
+            if (SDK_INT >= Build.VERSION_CODES.R) {
+                requestPermissions(new String[]{
+                                Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.MANAGE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA},
+                        REQUEST_CODE_ASK_PERMISSIONS);
+            }
+            recreate();
+            return ;
+        }
+         */
+        //Animations
+
+        topAnim = AnimationUtils.loadAnimation(this, R.anim.top_animation);
+        bottomAnim = AnimationUtils.loadAnimation(this, R.anim.bottom_animation);
+
+        //Hooks
+
+        logo = findViewById(R.id.logosplash);
+        titulo = findViewById(R.id.titulo_stop);
+        titulo2 = findViewById(R.id.titulo_amianto);
+        slogan = findViewById(R.id.slogansplash);
+
+        logo.setAnimation(topAnim);
+        titulo.setAnimation(bottomAnim);
+        titulo2.setAnimation(bottomAnim);
+        slogan.setAnimation(bottomAnim);
+
+        // AQUÍ SE VERIFICA SI EL USUARIO YA SE HABÍA LOGEADO ANTERIORMENTE, SI ES ASÍ, LE LLEVA DIRECTAMENTE A LA HOME.
+
+        // verificarLog();
+
+
+    }
+
+    public void verificarLog(int milisec){
+
+        SessionManager session = new SessionManager(getApplicationContext());
+        if(session.isLoggedIn()==true){
+            esperarYMain(milisec); // SI YA ESTABA LOGEADO SE LE LLEVA A LA HOME.
+        } else if (session.isLoggedIn()==false){
+            esperarYLogin(milisec); // SI NO ESTABA LOGEADO SE LE LLEVA A LA PANTALLA DE LOGIN.
+        }
+
+    }
+
+    public void esperarYLogin(int milisegundos) {
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(SplashActivity.this, Login.class);
+                Pair[] pairs = new Pair[2];
+                pairs[0] = new Pair<View,String>(logo,"logo_image");
+                pairs[1] = new Pair<View,String>(titulo,"logo_text");
+                pairs[2] = new Pair<View,String>(titulo2,"logo_text2");
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(SplashActivity.this, pairs);
+                startActivity(intent, options.toBundle());
+                finish();
+            }
+        }, milisegundos);
+    }
+
+    public void esperarYMain(int milisegundos) {
+
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            public void run() {
+                // acciones que se ejecutan tras los milisegundos
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                finish();
+                startActivity(intent);
+            }
+        }, milisegundos);
+    }
+
+    public boolean havePermission() {
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (checkSelfPermission(android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED && checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED
+                    && checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED && checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
+                verificarLog(3000);
+                return true;
+            } else {
+                ActivityCompat.requestPermissions(this , new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA}, 1);
+                verificarLog(10000);
+                return false;
+            }
+        }
+        else {
+            return true;
+        }
+    }
+
+}

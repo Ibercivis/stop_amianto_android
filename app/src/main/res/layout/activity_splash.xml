@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ibercivis.stopamianto.SplashActivity"
+    android:background="@color/dark">
+
+    <LinearLayout
+        android:id="@+id/centro_logos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/logosplash"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="140dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/logo_stop_amianto"
+            android:transitionName="logo_image" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="5">
+
+            <TextView
+                android:id="@+id/titulo_stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:layout_marginBottom="-12dp"
+                android:fontFamily="@font/avenir"
+                android:text="STOP"
+                android:textAlignment="center"
+                android:textColor="@color/secondaryColor"
+                android:textSize="48sp" />
+
+            <TextView
+                android:id="@+id/titulo_amianto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avenir"
+                android:text="AMIANTO"
+                android:textAlignment="center"
+                android:textColor="@color/secondaryColor"
+                android:textSize="48sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/slogansplash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/centro_logos"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="24dp"
+        android:paddingHorizontal="8dp"
+        android:text="@string/app_claim"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:paddingHorizontal="12dp"
+        android:text="Desarrollado por:"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/avenir"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="9sp"
+        android:layout_above="@id/logoibercivis"/>
+
+    <ImageView
+        android:id="@+id/logoibercivis"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+
+        android:layout_marginStart="16dp"
+        android:src="@drawable/logo_ibercivis"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+         />
+
+</RelativeLayout>

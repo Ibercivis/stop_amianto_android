@@ -1,0 +1,24 @@
+<resources>
+    <string name="base_url">https://amianto.ibercivis.es/webservice</string>
+
+    <string name="app_name">stopamianto</string>
+    <string name="app_claim" translatable="false">PLATAFORMA CIUDADANA PARA GEOLOCALIZACIÓN DE AMIANTO</string>
+    <string name="app_authors" translatable="false">Ibercivis</string>
+
+    <string name="login1" translatable="false">Bienvenido</string>
+    <string name="login2" translatable="false">Accede con tu usuario</string>
+    <string name="login3" translatable="false">Username</string>
+    <string name="login4" translatable="false">Password</string>
+    <string name="login5" translatable="false">¿Olvidaste tu contraseña?</string>
+    <string name="login6" translatable="false">Entrar</string>
+    <string name="login7" translatable="false">¿Nuevo usuario? Regístrate</string>
+
+    <string name="sign1" translatable="false">Bienvenido</string>
+    <string name="sign2" translatable="false">Regístrate para comenzar a mapear</string>
+    <string name="sign3" translatable="false">Username</string>
+    <string name="sign4" translatable="false">E-mail</string>
+    <string name="sign5" translatable="false">Contraseña</string>
+    <string name="sign6" translatable="false">Repetir contraseña</string>
+    <string name="sign7" translatable="false">Crear usuario</string>
+    <string name="sign8" translatable="false">¿Ya estás registrado? Accede</string>
+</resources>
