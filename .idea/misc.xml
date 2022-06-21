@@ -3,10 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/card_shape.xml" value="0.1235" />
         <entry key="app/src/main/res/drawable/marco_boton_solido.xml" value="0.1205" />
         <entry key="app/src/main/res/font/avenir.xml" value="0.11030354852501069" />
         <entry key="app/src/main/res/font/avenir2.xml" value="0.11030354852501069" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.19628286491387126" />
+        <entry key="app/src/main/res/layout/activity_report.xml" value="0.19628286491387126" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.19628286491387126" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.25" />
       </map>

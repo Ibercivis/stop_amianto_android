@@ -6,6 +6,9 @@
     <string name="app_claim" translatable="false">PLATAFORMA CIUDADANA PARA GEOLOCALIZACIÓN DE AMIANTO</string>
     <string name="app_authors" translatable="false">Ibercivis</string>
 
+    <string name="btn_continuar" translatable="false">CONTINUAR</string>
+    <string name="btn_back" translatable="false">ATRÁS</string>
+
     <string name="login1" translatable="false">Bienvenido</string>
     <string name="login2" translatable="false">Accede con tu usuario</string>
     <string name="login3" translatable="false">Username</string>
@@ -22,4 +25,15 @@
     <string name="sign6" translatable="false">Repetir contraseña</string>
     <string name="sign7" translatable="false">Crear usuario</string>
     <string name="sign8" translatable="false">¿Ya estás registrado? Accede</string>
+
+    <string name="report1" translatable="false">NUEVA OBSERVACIÓN</string>
+    <string name="report2" translatable="false">Tipo de estructura:</string>
+    <string name="report3" translatable="false">Cantidad:</string>
+    <string name="report4" translatable="false">Añade una foto (opcional)</string>
+    <string name="report5" translatable="false">¿Algún otro dato de interés? (opcional)</string>
+    <string name="report6" translatable="false">Tejado</string>
+    <string name="report7" translatable="false">Depósito</string>
+    <string name="report8" translatable="false">Tubería</string>
+    <string name="report9" translatable="false">Escombros</string>
+    <string name="report10" translatable="false">Otros</string>
 </resources>
