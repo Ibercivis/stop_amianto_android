@@ -200,7 +200,7 @@ public class Login extends AppCompatActivity {
                         if ((int) responseJSON.get("result") == 1) {
                             SessionManager session = new SessionManager(getApplicationContext());
                             session.setLogin(true, login_username_textview.getText().toString());
-                            session.setKeys(responseJSON.getString("token"), responseJSON.getInt("idUser"));
+                            //session.setKeys(responseJSON.getString("token"), responseJSON.getInt("idUser"));
                             cargar.setVisibility(View.GONE);
                             openMain();
 
@@ -314,7 +314,7 @@ public class Login extends AppCompatActivity {
 
     /** Open MAIN Activity */
     public void openMain() {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, Report.class);
         startActivity(intent);
         finish();
     }

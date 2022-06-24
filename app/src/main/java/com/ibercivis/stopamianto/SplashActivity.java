@@ -19,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.ibercivis.stopamianto.R;
+import com.ibercivis.stopamianto.clases.Observacion;
 import com.ibercivis.stopamianto.clases.SessionManager;
 
 

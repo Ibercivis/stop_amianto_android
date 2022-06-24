@@ -8,6 +8,8 @@
 
     <string name="btn_continuar" translatable="false">CONTINUAR</string>
     <string name="btn_back" translatable="false">ATRÁS</string>
+    <string name="btn_exit" translatable="false">Cerrar Sesión</string>
+    <string name="btn_delete" translatable="false">Eliminar</string>
 
     <string name="login1" translatable="false">Bienvenido</string>
     <string name="login2" translatable="false">Accede con tu usuario</string>
@@ -29,11 +31,29 @@
     <string name="report1" translatable="false">NUEVA OBSERVACIÓN</string>
     <string name="report2" translatable="false">Tipo de estructura:</string>
     <string name="report3" translatable="false">Cantidad:</string>
-    <string name="report4" translatable="false">Añade una foto (opcional)</string>
-    <string name="report5" translatable="false">¿Algún otro dato de interés? (opcional)</string>
+    <string name="report4" translatable="false">Añade una foto</string>
+    <string name="report5" translatable="false">¿Algún otro dato de interés?</string>
     <string name="report6" translatable="false">Tejado</string>
     <string name="report7" translatable="false">Depósito</string>
     <string name="report8" translatable="false">Tubería</string>
     <string name="report9" translatable="false">Escombros</string>
     <string name="report10" translatable="false">Otros</string>
+    <string name="report11" translatable="false">Poco</string>
+    <string name="report12" translatable="false">Medio</string>
+    <string name="report13" translatable="false">Mucho</string>
+    <string name="report14" translatable="false">ABRIR CÁMARA</string>
+
+
+    <string name="user1" translatable="false">MIS OBSERVACIONES</string>
+    <string name="user2" translatable="false">username</string>
+    <string name="user3" translatable="false">Todavía no has realizado ninguna observación</string>
+
+    <string name="reportuser1" translatable="false">Estructura:</string>
+    <string name="reportuser2" translatable="false">Cantidad:</string>
+    <string name="reportuser3" translatable="false">Fecha del reporte:</string>
+    <string name="reportuser4" translatable="false">Información:</string>
+
+    <string name="menu1" translatable="false">Mapa</string>
+    <string name="menu2" translatable="false">Reportar</string>
+    <string name="menu3" translatable="false">Usuario</string>
 </resources>

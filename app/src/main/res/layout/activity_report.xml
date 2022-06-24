@@ -84,7 +84,9 @@
         android:background="@drawable/card_shape"
         android:orientation="vertical">
 
-        <LinearLayout
+                /FASE 1
+
+                <LinearLayout
             android:id="@+id/reporte_fase1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -92,7 +94,8 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="16dp"
             android:background="@color/transparente"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            >
 
             <TextView
                 android:layout_width="wrap_content"
@@ -123,9 +126,11 @@
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:layout_centerHorizontal="true"
-                        android:src="@drawable/logo_stop_amianto" />
+                        android:background="@color/transparente"
+                        android:src="@drawable/boton_tejado_inactivo" />
 
                     <TextView
+                        android:id="@+id/texto_tejado"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/image_tejado"
@@ -151,9 +156,11 @@
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:layout_centerHorizontal="true"
-                        android:src="@drawable/logo_stop_amianto" />
+                        android:background="@color/transparente"
+                        android:src="@drawable/boton_deposito_inactivo" />
 
                     <TextView
+                        android:id="@+id/texto_deposito"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/image_deposito"
@@ -179,9 +186,11 @@
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:layout_centerHorizontal="true"
-                        android:src="@drawable/logo_stop_amianto" />
+                        android:background="@color/transparente"
+                        android:src="@drawable/boton_tuberia_inactivo" />
 
                     <TextView
+                        android:id="@+id/texto_tuberia"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/image_tuberia"
@@ -216,9 +225,11 @@
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:layout_centerHorizontal="true"
-                        android:src="@drawable/logo_stop_amianto" />
+                        android:background="@color/transparente"
+                        android:src="@drawable/boton_escombro_inactivo" />
 
                     <TextView
+                        android:id="@+id/texto_escombros"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/image_escombros"
@@ -244,9 +255,11 @@
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:layout_centerHorizontal="true"
-                        android:src="@drawable/logo_stop_amianto" />
+                        android:background="@color/transparente"
+                        android:src="@drawable/boton_otros_inactivo" />
 
                     <TextView
+                        android:id="@+id/texto_otros"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/image_otros"
@@ -261,6 +274,257 @@
 
 
             </LinearLayout>
+
+        </LinearLayout>
+
+                /FASE 2
+
+                <LinearLayout
+                    android:id="@+id/reporte_fase2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/transparente"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:background="@color/transparente"
+                android:text="@string/report3"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparente"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:background="@color/transparente"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/image_poco"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/transparente"
+                        android:src="@drawable/boton_poco_inactivo" />
+
+                    <TextView
+                        android:id="@+id/texto_poco"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/image_poco"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:background="@color/transparente"
+                        android:text="@string/report11"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:background="@color/transparente"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/image_medio"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/transparente"
+                        android:src="@drawable/boton_medio_inactivo" />
+
+                    <TextView
+                        android:id="@+id/texto_medio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/image_medio"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:background="@color/transparente"
+                        android:text="@string/report12"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:background="@color/transparente"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/image_mucho"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/transparente"
+                        android:src="@drawable/boton_mucho_inactivo" />
+
+                    <TextView
+                        android:id="@+id/texto_mucho"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/image_mucho"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:background="@color/transparente"
+                        android:text="@string/report13"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+                /FASE 3
+
+                <LinearLayout
+            android:id="@+id/reporte_fase3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/transparente"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:background="@color/transparente"
+                android:text="@string/report4"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparente"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:background="@color/transparente"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/image_camera"
+                        android:layout_width="140dp"
+                        android:layout_height="120dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/transparente"
+                        android:src="@drawable/ic_baseline_photo_camera_24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/image_camera"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="0dp"
+                        android:background="@color/transparente"
+                        android:text="@string/report14"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+                /FASE 4
+
+                <LinearLayout
+            android:id="@+id/reporte_fase4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/transparente"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:background="@color/transparente"
+                android:text="@string/report5"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparente"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:background="@color/transparente"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/reporte_texto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="0dp"
+                        android:gravity="start"
+                        android:inputType="textMultiLine"
+                        android:lines="5"
+                        android:maxLines="5"
+                        android:overScrollMode="always"
+                        android:padding="10dp"
+                        android:scrollbarStyle="insideInset"
+                        android:scrollbars="vertical" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
 
         </LinearLayout>
 
@@ -282,37 +546,48 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp">
 
-            <ImageView
-                android:id="@+id/reporte_image_arrow"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_alignParentStart="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginStart="20dp"
-                android:background="@color/transparente"
-                android:src="@drawable/ic_baseline_arrow_back_24"
-                app:tint="@color/textoClaro"
-                android:layout_centerVertical="true"/>
-
-            <TextView
+            <LinearLayout
                 android:id="@+id/reporte_backfaseBtn"
+                android:clickable="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="4dp"
-                android:layout_toRightOf="@id/reporte_image_arrow"
+                android:orientation="horizontal"
                 android:background="@color/transparente"
-                android:text="@string/btn_back"
-                android:textColor="@color/textoClaro"
-                android:textSize="14sp" />
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/reporte_image_arrow"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@color/transparente"
+                    android:src="@drawable/ic_baseline_arrow_back_24"
+                    app:tint="@color/textoClaro"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="4dp"
+                    android:background="@color/transparente"
+                    android:text="@string/btn_back"
+                    android:textColor="@color/textoClaro"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
 
             <TextView
                 android:id="@+id/reporte_faseTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="20dp"
-                android:layout_alignParentRight="true"
                 android:background="@color/transparente"
                 android:text="Fase 1/4"
                 android:textColor="@color/white"
@@ -352,5 +627,17 @@
 
 
     </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemBackground="@color/black"
+        app:itemTextColor="@drawable/selector_menu_bottom"
+        app:itemIconTint="@drawable/selector_menu_icon"
+        app:menu="@menu/menu_bottom"
+        android:layout_alignParentBottom="true"/>
+
+
 
 </RelativeLayout>

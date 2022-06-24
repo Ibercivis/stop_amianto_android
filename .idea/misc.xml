@@ -3,14 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/box_shape.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/button_shape.xml" value="0.1235" />
         <entry key="app/src/main/res/drawable/card_shape.xml" value="0.1235" />
         <entry key="app/src/main/res/drawable/marco_boton_solido.xml" value="0.1205" />
+        <entry key="app/src/main/res/drawable/marcobotonsolido.xml" value="0.1235" />
+        <entry key="app/src/main/res/drawable/round_shape.xml" value="0.1365" />
+        <entry key="app/src/main/res/drawable/selector_menu_bottom.xml" value="0.1045" />
+        <entry key="app/src/main/res/drawable/selector_menu_icon.xml" value="0.1355" />
         <entry key="app/src/main/res/font/avenir.xml" value="0.11030354852501069" />
         <entry key="app/src/main/res/font/avenir2.xml" value="0.11030354852501069" />
+        <entry key="app/src/main/res/font/montserrat_bold.xml" value="0.1603336422613531" />
+        <entry key="app/src/main/res/font/noto_sans.xml" value="0.14493373236425822" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.19628286491387126" />
-        <entry key="app/src/main/res/layout/activity_report.xml" value="0.19628286491387126" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.195382642154767" />
+        <entry key="app/src/main/res/layout/activity_report.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.19628286491387126" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_user.xml" value="0.195382642154767" />
+        <entry key="app/src/main/res/layout/observacion_card.xml" value="0.195382642154767" />
+        <entry key="app/src/main/res/menu/menu_bottom.xml" value="0.1929084001688476" />
       </map>
     </option>
   </component>
