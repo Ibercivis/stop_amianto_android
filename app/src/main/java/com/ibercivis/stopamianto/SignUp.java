@@ -192,7 +192,6 @@ public class SignUp extends AppCompatActivity {
                             toast.show();
                             openLogin();
 
-
                         }
                         else {
                             showError("Error while signing up: " + responseJSON.get("message") + ".");
