@@ -60,9 +60,9 @@ public class SessionManager {
         Log.d(TAG, "User activity_login session modified!");
     }
 
-    public void setKeys(String token, int id){
+    public void setKeys(int id){
 
-        editor.putString(KEY_TOKEN, token);
+
         editor.putInt(KEY_ID, id);
 
         editor.commit();

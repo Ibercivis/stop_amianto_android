@@ -135,7 +135,7 @@ public class AdaptadorObservaciones extends RecyclerView.Adapter<ViewHolderObser
 
 
         // Url for the webservice
-        String url = "https://interfungi.ibercivis.es/deleteMarcador.php";
+        String url = "https://amianto.ibercivis.es/webservice/deleteReport.php";
 
         RequestQueue queue = Volley.newRequestQueue(cargar.getContext());
         StringRequest sr = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
@@ -188,7 +188,7 @@ public class AdaptadorObservaciones extends RecyclerView.Adapter<ViewHolderObser
                 int duration = Toast.LENGTH_SHORT;
                 Toast toast;
                 CharSequence text;
-                text = "Error while login: " + error.getLocalizedMessage() + ".";
+                text = "Error while deleting: " + error.getLocalizedMessage() + ".";
                 toast = Toast.makeText(cargar.getContext(), text, duration);
                 toast.show();
                 cargar.setVisibility(View.GONE);
@@ -200,7 +200,6 @@ public class AdaptadorObservaciones extends RecyclerView.Adapter<ViewHolderObser
 
                 SessionManager session = new SessionManager(cargar.getContext());
                 login_params.put("idUser", String.valueOf(session.getIdUser()));
-                login_params.put("token", String.valueOf(session.getToken()));
                 login_params.put("id", String.valueOf(id));
 
 

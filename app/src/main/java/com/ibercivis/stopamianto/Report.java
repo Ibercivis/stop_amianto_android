@@ -792,13 +792,30 @@ public class Report extends AppCompatActivity {
             subirMarcador();
 
         } else {
-            GpsMyLocationProvider provider = new GpsMyLocationProvider(this.getApplicationContext());
+           /* GpsMyLocationProvider provider = new GpsMyLocationProvider(this.getApplicationContext());
             mLocationOverlay = new MyLocationNewOverlay(provider, map);
             mLocationOverlay.enableMyLocation();
             GeoPoint myPoint = mLocationOverlay.getMyLocation();
             latitud = myPoint.getLatitude();
             longitud = myPoint.getLongitude();
-            subirMarcador();
+            subirMarcador(); */
+            currentLocation = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+            if(currentLocation != null) {
+                latitud = currentLocation.getLatitude();
+                longitud = currentLocation.getLongitude();
+                subirMarcador();
+
+            } else {
+            int duration = Toast.LENGTH_SHORT;
+            Toast toast;
+            CharSequence text;
+
+
+
+            text = "Estamos teniendo problemas para obtener tu ubicación. Por favor, vuelve a intentarlo.";
+            toast = Toast.makeText(getApplicationContext(), text, duration);
+            toast.show();
+        }
 
         }
 
@@ -837,8 +854,10 @@ public class Report extends AppCompatActivity {
                         text = "Marcador subido correctamente";
                         toast = Toast.makeText(getApplicationContext(), text, duration);
                         toast.show();
-
-                        recreate();
+                        txt_reporte.setText("");
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        startActivity(intent);
+                        finish();
 
 
                     } else {

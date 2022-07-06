@@ -631,12 +631,12 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigator"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
         app:itemBackground="@color/black"
-        app:itemTextColor="@drawable/selector_menu_bottom"
         app:itemIconTint="@drawable/selector_menu_icon"
-        app:menu="@menu/menu_bottom"
-        android:layout_alignParentBottom="true"/>
+        app:itemTextColor="@drawable/selector_menu_bottom"
+        app:menu="@menu/menu_bottom" />
 
 
 

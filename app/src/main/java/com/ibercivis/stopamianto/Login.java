@@ -200,7 +200,7 @@ public class Login extends AppCompatActivity {
                         if ((int) responseJSON.get("result") == 1) {
                             SessionManager session = new SessionManager(getApplicationContext());
                             session.setLogin(true, login_username_textview.getText().toString());
-                            //session.setKeys(responseJSON.getString("token"), responseJSON.getInt("idUser"));
+                            session.setKeys(responseJSON.getInt("id"));
                             cargar.setVisibility(View.GONE);
                             openMain();
 

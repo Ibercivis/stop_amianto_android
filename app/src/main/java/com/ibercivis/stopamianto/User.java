@@ -154,8 +154,8 @@ public class User extends AppCompatActivity {
                             // JSONArray jsonArray1 = jsonArray.getJSONArray(i); //Diferentes proyectos
 
 
-                            int id = Integer.valueOf(String.valueOf(jsonArray.getJSONObject(i).get("id")));
-                            String foto = "https://amianto.ibercivis.es/uploads/"+String.valueOf(jsonArray.getJSONObject(i).get("id"));
+                            int id = Integer.valueOf(String.valueOf(jsonArray.getJSONObject(i).get("report_id")));
+                            String foto = "https://amianto.ibercivis.es/uploads/"+String.valueOf(jsonArray.getJSONObject(i).get("report_id"));
                             int hasPhoto = Integer.valueOf(String.valueOf(jsonArray.getJSONObject(i).get("hasphoto")));
                             String fechaObservacion = String.valueOf(jsonArray.getJSONObject(i).get("report_date"));
                             String estructura = String.valueOf(jsonArray.getJSONObject(i).get("build"));

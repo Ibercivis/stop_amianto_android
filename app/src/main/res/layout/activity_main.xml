@@ -60,12 +60,27 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/centro_logos"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="60dp">
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </LinearLayout>
+
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigator"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         app:itemBackground="@color/black"
         app:itemTextColor="@drawable/selector_menu_bottom"
         app:itemIconTint="@drawable/selector_menu_icon"
