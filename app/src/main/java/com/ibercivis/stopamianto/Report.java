@@ -100,6 +100,8 @@ public class Report extends AppCompatActivity {
 
     Double latitud, longitud;
 
+    Boolean fromLongClick;
+
     Integer fase = 1;
 
     @Override
@@ -109,6 +111,23 @@ public class Report extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottom_navigator);
         bottomNavigationView.setSelectedItemId(R.id.reportar);
+
+        fromLongClick = getIntent().getBooleanExtra("fromLongClick", false); // Con esta variable se detecta si se viene desde un LongClick en el mapa
+        if (fromLongClick) {
+            int duration = Toast.LENGTH_LONG;
+            Toast toast;
+            CharSequence text;
+            text = "Vas a subir un marcador en un punto seleccionado en el mapa";
+            toast = Toast.makeText(getApplicationContext(), text, duration);
+            toast.show();
+        } else {
+            int duration = Toast.LENGTH_LONG;
+            Toast toast;
+            CharSequence text;
+            text = "Vas a subir un marcador asociado a tu ubicación actual";
+            toast = Toast.makeText(getApplicationContext(), text, duration);
+            toast.show();
+        }
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -787,8 +806,11 @@ public class Report extends AppCompatActivity {
 
 
         if(currentLocation != null) {
-            latitud = currentLocation.getLatitude();
-            longitud = currentLocation.getLongitude();
+
+            //latitud = currentLocation.getLatitude();
+            //longitud = currentLocation.getLongitude();
+            latitud = getIntent().getDoubleExtra("latitude", currentLocation.getLatitude());
+            longitud = getIntent().getDoubleExtra("longitude", currentLocation.getLongitude());
             subirMarcador();
 
         } else {
@@ -801,8 +823,10 @@ public class Report extends AppCompatActivity {
             subirMarcador(); */
             currentLocation = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
             if(currentLocation != null) {
-                latitud = currentLocation.getLatitude();
-                longitud = currentLocation.getLongitude();
+                //latitud = currentLocation.getLatitude();
+                //longitud = currentLocation.getLongitude();
+                latitud = getIntent().getDoubleExtra("latitude", currentLocation.getLatitude());
+                longitud = getIntent().getDoubleExtra("longitude", currentLocation.getLongitude());
                 subirMarcador();
 
             } else {

@@ -364,7 +364,7 @@ public class Login extends AppCompatActivity {
                             toast.show();
 
                             cargar.setVisibility(View.GONE);
-
+                            display_recover.setVisibility(View.GONE);
 
 
 
@@ -378,11 +378,13 @@ public class Login extends AppCompatActivity {
                             toast.show();
 
                             // Clean the text fields for new entries
-
+                            display_recover.setVisibility(View.GONE);
                             cargar.setVisibility(View.GONE);
                         }
                     } catch (JSONException e) {
+
                         e.printStackTrace();
+                        display_recover.setVisibility(View.GONE);
                         cargar.setVisibility(View.GONE);
                     }
                 }

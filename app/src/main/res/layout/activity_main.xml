@@ -60,20 +60,36 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/parentView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/centro_logos"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="60dp">
 
-        <WebView
-            android:id="@+id/webview"
+        <org.osmdroid.views.MapView
+            android:id="@+id/map_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/center_button"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_baseline_my_location_24"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="10dp"
+            android:background="#00ffffff"
+
+            />
 
 
-    </LinearLayout>
+    </RelativeLayout>
 
 
 

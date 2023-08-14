@@ -237,9 +237,11 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-condensed"
                     android:text="Para el disfrute de nuestra app, usted acepta nuestra Política de
-Privacidad: https://ibercivis.es/interfungi-politica-de-privacidad/"
+Privacidad: https://ibercivis.es/politica-de-privacidad/"
                     android:textSize="12sp"
-                    android:autoLink="phone|web"/>
+                    android:autoLink="phone|web"
+                    android:textColor="@color/white"
+                    android:textColorLink="@color/colorApagado"/>
 
             </LinearLayout>
 
@@ -261,7 +263,8 @@ Privacidad: https://ibercivis.es/interfungi-politica-de-privacidad/"
                     android:fontFamily="sans-serif-condensed"
                     android:text="AUTORIZO (como mayor de edad o como responsable legal de un menor de 14 años) a la toma de
 imágenes fotográficas con la única finalidad de archivo y difusión."
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    android:textColor="@color/white"/>
 
             </LinearLayout>
 

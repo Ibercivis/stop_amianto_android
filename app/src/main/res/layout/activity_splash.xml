@@ -9,26 +9,33 @@
     android:background="@color/dark">
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+    <LinearLayout
         android:id="@+id/centro_logos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        >
 
         <ImageView
             android:id="@+id/logosplash"
             android:layout_width="0dp"
-            android:layout_weight="3"
             android:layout_height="140dp"
             android:layout_marginStart="16dp"
+            android:layout_weight="3"
             android:src="@drawable/logo_stop_amianto"
-            android:transitionName="logo_image" />
+            android:transitionName="logo_image"
+            />
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="5">
+            android:layout_weight="5"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/titulo_stop"
@@ -58,22 +65,52 @@
 
     </LinearLayout>
 
+        <TextView
+            android:id="@+id/slogansplash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:paddingHorizontal="8dp"
+            android:text="@string/app_claim"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_marginBottom="100dp" />
 
-    <TextView
-        android:id="@+id/slogansplash"
-        android:layout_width="wrap_content"
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/logos_splash"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/centro_logos"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="24dp"
-        android:paddingHorizontal="8dp"
-        android:text="@string/app_claim"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="18sp" />
+        android:orientation="horizontal"
+        android:layout_above="@id/developed_by"
+        >
+
+        <ImageView
+            android:id="@+id/ccoo"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:src="@drawable/logo_ccoo"
+            android:layout_weight="1"
+            />
+
+        <ImageView
+            android:id="@+id/gob"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:src="@drawable/logo_gobierno"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
 
 
     <TextView
+        android:id="@+id/developed_by"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -91,12 +128,12 @@
         android:id="@+id/logoibercivis"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-
         android:layout_marginStart="16dp"
         android:src="@drawable/logo_ibercivis"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="32dp"
          />
+
 
 </RelativeLayout>
